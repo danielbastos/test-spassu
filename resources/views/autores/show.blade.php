@@ -6,6 +6,6 @@
   <ul class="list-group mb-3">
     <li class="list-group-item"><strong>Nome:</strong> {{ $autor->nome }}</li>
   </ul>
-  <a href="{{ route('autores.edit', $autor) }}" class="btn btn-warning">Editar</a>
+  <a href="{{ route('autores.edit', $autor->cod_au) }}" class="btn btn-warning">Editar</a>
   <a href="{{ route('autores.index') }}" class="btn btn-secondary">Voltar</a>
 @endsection
