@@ -1,0 +1,59 @@
+/* Layout base */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--size-md);
+}
+
+/* Botão genérico */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  padding: .5rem .9rem;
+  font-size: var(--size-md);
+  cursor: pointer; user-select: none;
+  transition: .15s ease;
+  background: #fff; color: var(--color-text);
+}
+.btn:hover { transform: translateY(-1px); }
+
+/* Variações de cor */
+.btn--primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+/* Tamanhos do botão */
+.btn--xs { font-size: var(--size-xs); padding: .25rem .5rem; }
+.btn--sm { font-size: var(--size-sm); padding: .4rem .7rem; }
+.btn--md { font-size: var(--size-md); padding: .5rem .9rem; }
+.btn--lg { font-size: var(--size-lg); padding: .6rem 1rem; }
+.btn--xl { font-size: var(--size-xl); padding: .7rem 1.1rem; }
+
+/* Input genérico */
+.input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: .5rem .75rem;
+  font-size: var(--size-md);
+  background: #fff; color: var(--color-text);
+}
+
+/* Tamanhos do input (altura/fonte) */
+.input--sm { font-size: var(--size-sm); padding: .4rem .6rem; }
+.input--md { font-size: var(--size-md); padding: .5rem .75rem; }
+.input--lg { font-size: var(--size-lg); padding: .6rem .9rem; }
+
+/* Card */
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  background: #fff;
+}
+.card__title { font-size: var(--size-lg); margin-bottom: .25rem; }
+.card__sub   { font-size: var(--size-sm); opacity: .75; }

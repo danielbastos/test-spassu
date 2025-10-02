@@ -1,0 +1,28 @@
+:root {
+  /* Cores base */
+  --color-bg: #ffffff;
+  --color-text: #1f2937;     /* cinza-900 */
+  --color-primary: #0d6efd;  /* azul */
+  --color-primary-contrast: #ffffff;
+  --color-border: #e5e7eb;   /* cinza-200 */
+
+  /* Escala de tamanho */
+  --size-xs: 0.75rem;  /* 12px */
+  --size-sm: 0.875rem; /* 14px */
+  --size-md: 1rem;     /* 16px */
+  --size-lg: 1.125rem; /* 18px */
+  --size-xl: 1.25rem;  /* 20px */
+
+  /* Espaçamentos e raios */
+  --radius: 0.5rem;    /* 8px */
+  --gap: 0.75rem;      /* 12px */
+}
+
+/* Tema escuro (opcional) */
+[data-theme="dark"] {
+  --color-bg: #0b1020;
+  --color-text: #e5e7eb;
+  --color-primary: #60a5fa;
+  --color-primary-contrast: #111827;
+  --color-border: #1f2937;
+}
