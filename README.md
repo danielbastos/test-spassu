@@ -7,7 +7,64 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Sobre o Projeto
+
+Este projeto utiliza o [Laravel](https://laravel.com) e o [Laravel Sail](https://laravel.com/docs/10.x/sail) para facilitar o ambiente de desenvolvimento com Docker.
+
+### Subindo a aplicação com Sail
+
+1. **Copie o arquivo de exemplo de ambiente:**
+   ```bash
+   cp .env.example .env
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   ./vendor/bin/sail up -d
+   ./vendor/bin/sail composer install
+   ```
+
+3. **Gere a chave da aplicação:**
+   ```bash
+   ./vendor/bin/sail artisan key:generate
+   ```
+
+4. **Suba os containers:**
+   ```bash
+   ./vendor/bin/sail up -d
+   ```
+
+### Rodando as migrations
+
+Execute o comando abaixo para criar as tabelas no banco de dados:
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
+### Rodando os seeders
+
+Para popular o banco de dados com dados iniciais, execute:
+
+```bash
+./vendor/bin/sail artisan db:seed
+```
+
+### Rodando os testes
+
+Para executar os testes automatizados do projeto, utilize:
+
+```bash
+./vendor/bin/sail artisan test
+```
+ou
+```bash
+./vendor/bin/sail test
+```
+
+---
+
+## Documentação Original do Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
