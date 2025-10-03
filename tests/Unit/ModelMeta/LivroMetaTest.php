@@ -11,6 +11,6 @@ class LivroMetaTest extends TestCase
         $m = new Livro;
         $this->assertEquals('livro', $m->getTable());
         $this->assertEquals('cod_l', $m->getKeyName());
-        $this->assertEquals(['titulo','editora','edicao','ano'], $m->getFillable());
+        $this->assertEquals(['titulo','editora','edicao','ano','preco'], $m->getFillable());
     }
 }

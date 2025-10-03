@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Tests\Feature\Models;
 
 use App\Models\Autor;
@@ -15,9 +14,15 @@ class RelationsTest extends TestCase
 
     public function test_vincula_autores_e_assuntos_a_um_livro_com_attach()
     {
-        $livro = Livro::create(['titulo'=>'Livro Z','editora'=>'Edit','edicao'=>'1','ano'=>2025]);
-        $autor = Autor::create(['nome'=>'Autor Y']);
-        $assunto = Assunto::create(['descricao'=>'Estruturas']);
+        $livro = Livro::create([
+            'titulo'  => 'Livro Z',
+            'editora' => 'Edit',
+            'edicao'  => 1,
+            'ano'     => 2025,
+            'preco'   => 50.00,
+        ]);
+        $autor = Autor::create(['nome' => 'Autor Y']);
+        $assunto = Assunto::create(['descricao' => 'Estruturas']);
 
         $livro->autores()->attach($autor->getKey());      // usa livro_autor
         $livro->assuntos()->attach($assunto->getKey());   // usa livro_assunto
