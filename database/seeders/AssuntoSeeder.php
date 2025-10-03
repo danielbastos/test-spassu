@@ -13,6 +13,10 @@ class AssuntoSeeder extends Seeder
             ['descricao' => 'Algoritmos'],
             ['descricao' => 'Banco de Dados'],
             ['descricao' => 'Engenharia'],
+            ['descricao' => 'IA'],
+            ['descricao' => 'Redes'],
+            ['descricao' => 'Programação Web'],
+            ['descricao' => 'BI'],
         ];
 
         foreach ($assuntos as $a) {

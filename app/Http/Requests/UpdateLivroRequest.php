@@ -30,6 +30,7 @@ class UpdateLivroRequest extends FormRequest
             'editora' => ['nullable', 'string', 'max:255'],
             'edicao'  => ['nullable', 'string', 'max:50'],
             'ano'     => ['nullable', 'integer', 'max:' . (date('Y'))],
+            'preco'   => ['required', 'numeric', 'min:0'],
             'autores' => ['array'],
             'autores.*' => ['integer', 'exists:autor,cod_au'],
         ];
@@ -43,6 +44,9 @@ class UpdateLivroRequest extends FormRequest
             'titulo.max'      => 'O título pode ter no máximo :max caracteres.',
             'ano.integer'     => 'O ano deve ser um número.',
             'ano.max'         => 'O ano deve ser menor ou igual a :max.',
+            'preco.required'  => 'O preço é obrigatório.',
+            'preco.numeric'   => 'O preço deve ser um número.',
+            'preco.min'       => 'O preço deve ser maior ou igual a zero.',
         ];
     }
 
@@ -53,6 +57,7 @@ class UpdateLivroRequest extends FormRequest
             'editora' => $this->editora ? trim($this->editora) : null,
             'edicao'  => $this->edicao ? trim($this->edicao) : null,
             'ano'     => $this->ano !== null && $this->ano !== '' ? (int) $this->ano : null,
+            'preco'   => $this->preco !== null && $this->preco !== '' ? (float) str_replace(',', '.', $this->preco) : null,
         ]);
     }
 }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('editora', 40);
             $table->integer('edicao');
             $table->integer('ano');
+            $table->decimal('preco', 8, 2); // Adicionado campo preço
             $table->timestamps();
         });
     }

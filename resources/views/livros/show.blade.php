@@ -8,6 +8,7 @@
     <li class="list-group-item"><strong>Editora:</strong> {{ $livro->editora ?? '—' }}</li>
     <li class="list-group-item"><strong>Edição:</strong> {{ $livro->edicao ?? '—' }}</li>
     <li class="list-group-item"><strong>Ano:</strong> {{ $livro->ano ?? '—' }}</li>
+    <li class="list-group-item"><strong>Preço:</strong> R$ {{ number_format($livro->preco, 2, ',', '.') }}</li>
   </ul>
 
   <a href="{{ route('livros.edit', $livro) }}" class="btn btn-warning">Editar</a>

@@ -13,6 +13,11 @@ class AutorSeeder extends Seeder
             ['nome' => 'Ada Lovelace'],
             ['nome' => 'Alan Turing'],
             ['nome' => 'Donald Knuth'],
+            ['nome' => 'Grace Hopper'],
+            ['nome' => 'Linus Torvalds'],
+            ['nome' => 'Tim Berners-Lee'],
+            ['nome' => 'Margaret Hamilton'],
+            ['nome' => 'Barbara Liskov'],
         ];
 
         foreach ($autores as $a) {

@@ -17,6 +17,7 @@ class Livro extends Model
         'editora',
         'edicao',
         'ano',
+        'preco'
     ];
 
     public function autores() {

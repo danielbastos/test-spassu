@@ -21,6 +21,7 @@
         <th>Título</th>
         <th>Editora</th>
         <th>Ano</th>
+        <th>Preço</th>
         <th style="width: 180px;">Ações</th>
       </tr>
     </thead>
@@ -31,6 +32,7 @@
           <td>{{ $livro->titulo }}</td>
           <td>{{ $livro->editora }}</td>
           <td>{{ $livro->ano }}</td>
+          <td>R$ {{ number_format($livro->preco, 2, ',', '.') }}</td>
           <td>
             <a href="{{ route('livros.show', $livro) }}" class="btn btn-sm btn-info">Ver</a>
             <a href="{{ route('livros.edit', $livro) }}" class="btn btn-sm btn-warning">Editar</a>
@@ -44,7 +46,7 @@
         </tr>
       @empty
         <tr>
-          <td colspan="5" class="text-center">Nenhum livro encontrado.</td>
+          <td colspan="6" class="text-center">Nenhum livro encontrado.</td>
         </tr>
       @endforelse
     </tbody>

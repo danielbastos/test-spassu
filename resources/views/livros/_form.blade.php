@@ -39,5 +39,12 @@
   @error('ano') <div class="invalid-feedback">{{ $message }}</div> @enderror
 </div>
 
+<div class="mb-3">
+  <label class="form-label">Preço *</label>
+  <input type="number" step="0.01" name="preco" class="form-control @error('preco') is-invalid @enderror"
+         value="{{ old('preco', $livro->preco ?? '') }}">
+  @error('preco') <div class="invalid-feedback">{{ $message }}</div> @enderror
+</div>
+
 <button class="btn btn-success">Salvar</button>
 <a href="{{ route('livros.index') }}" class="btn btn-secondary">Cancelar</a>
